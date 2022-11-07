@@ -16,15 +16,20 @@
 
       <ul class="list-group">
         <li
-          *ngFor="let task of listTasks; let i=index"
+          *ngFor="let task of listTasks; let i = index"
           class="list-group-item d-flex justify-content-between"
         >
           <span class="cursor" (click)="updateTask(task, i)">
-            <i [ngClass]="task.estate ? 'fas fa-check-circle' : 'far fa-circle' ">
-
-            </i></span>
-          {{ task.name }} {{ task.estate }}
-          <span class="cursor" (click)="deleteTask(i)"><i class="fas fa-trash text-danger"></i></span>
+            <i
+              [class.text-success]="task.state"
+              [ngClass]="task.state ? 'fas fa-check-circle' : 'far fa-circle'"
+            >
+            </i
+          ></span>
+          {{ task.name }}
+          <span class="cursor" (click)="deleteTask(i)"
+            ><i class="fas fa-trash text-danger"></i
+          ></span>
         </li>
       </ul>
     </div>

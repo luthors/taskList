@@ -22,7 +22,7 @@ export class TasksComponent implements OnInit {
       console.log(this.nameTask);
       const Task:Task={
         name: this.nameTask,
-        estate:false
+        state:false
       }
 
       this.listTasks.push(Task);
@@ -31,7 +31,7 @@ export class TasksComponent implements OnInit {
   }
 
   updateTask(task:Task, i:number){
-    this.listTasks[i].estate=!task.estate;
+    this.listTasks[i].state=!task.state;
   }
 
   deleteTask(i:number){

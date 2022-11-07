@@ -1,9 +1,9 @@
 export class Task {
   name: string;
-  estate: boolean;
+  state: boolean;
 
-  constructor (name:string, estate:boolean){
+  constructor (name:string, state:boolean){
     this.name=name;
-    this.estate=estate;
+    this.state=state;
   }
 }
